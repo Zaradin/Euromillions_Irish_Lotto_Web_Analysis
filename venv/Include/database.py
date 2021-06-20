@@ -30,3 +30,5 @@ def insertIrishLottoPlus1Results():
 
 def insertIrishLottoPlus2Results():
     pass
+
+insertEuromillionsResults()
