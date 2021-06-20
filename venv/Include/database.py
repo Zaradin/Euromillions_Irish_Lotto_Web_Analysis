@@ -6,8 +6,6 @@ con = sqlite3.connect("Results")
 
 date = datetime.today().strftime('%d-%m-%Y')
 
-# TODO I also need to create more tabels in the database for the different lottos, for example. A table for euromillions irish plus draw, and irish lotto plus 1, lotto plus 2 and so on....
-
 def insertEuromillionsResults():
     euroMillionsNumbers = main.getEuroMillionsNumbers()
     con.execute("INSERT INTO euromillionsResults VALUES (?, ?, ?, ?, ?, ?, ?, ?);", (
@@ -23,12 +21,23 @@ def insertEuromillionsPlusResults():
     con.commit()
 
 def insertIrishLottoResults():
-    pass
+    irishLottoNumbers = main.getLottoNumbers()
+    con.execute("INSERT INTO irishLottoResults VALUES (?, ?, ?, ?, ?, ?, ?, ?);", (
+    date, irishLottoNumbers[0], irishLottoNumbers[1], irishLottoNumbers[2], irishLottoNumbers[3],
+    irishLottoNumbers[4], irishLottoNumbers[5], irishLottoNumbers[6]))
+    con.commit()
 
-def insertIrishLottoPlus1Results():
-    pass
+def insertIrishLottoPlusOneResults():
+    irishLottoPlusOneNumbers = main.getLottoPlusOneNumbers()
+    con.execute("INSERT INTO irishLottoPlusOneResults VALUES (?, ?, ?, ?, ?, ?, ?, ?);", (
+    date, irishLottoPlusOneNumbers[0], irishLottoPlusOneNumbers[1], irishLottoPlusOneNumbers[2], irishLottoPlusOneNumbers[3],
+    irishLottoPlusOneNumbers[4], irishLottoPlusOneNumbers[5], irishLottoPlusOneNumbers[6]))
+    con.commit()
 
-def insertIrishLottoPlus2Results():
-    pass
+def insertIrishLottoPlusTwoResults():
+    irishLottoPlusTwoNumbers = main.getLottoPlusTwoNumbers()
+    con.execute("INSERT INTO irishLottoPlusTwoResults VALUES (?, ?, ?, ?, ?, ?, ?, ?);", (
+    date, irishLottoPlusTwoNumbers[0], irishLottoPlusTwoNumbers[1], irishLottoPlusTwoNumbers[2], irishLottoPlusTwoNumbers[3],
+    irishLottoPlusTwoNumbers[4], irishLottoPlusTwoNumbers[5], irishLottoPlusTwoNumbers[6]))
+    con.commit()
 
-insertEuromillionsResults()
