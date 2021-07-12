@@ -7,7 +7,7 @@
 <br />
 <p align="center">
   <a href="https://www.lottery.ie/header-footer/_jcr_content/root/header/megamenu/logo.coreimg.png/1618127039813/megamenu-logo.png">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo">
   </a>
 
   <h3 align="center">The National Lottery Web Analysis</h3>
