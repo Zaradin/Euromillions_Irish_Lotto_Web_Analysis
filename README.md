@@ -77,7 +77,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [stars-url]: https://github.com/Zaradin/Euromillions_Irish_Lotto_Web_Analysis/stargazers
 [issues-shield]: https://img.shields.io/github/issues/Zaradin/Euromillions_Irish_Lotto_Web_Analysis.svg?style=for-the-badge
 [issues-url]: https://github.com/Zaradin/Euromillions_Irish_Lotto_Web_Analysis/issues
-[license-shield]: https://img.shields.io/github/license/Zaradin/Euromillions_Irish_Lotto_Web_Analysis.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/Zaradin/Euromillions_Irish_Lotto_Web_Analysis.svg?style=for-the-badge&logo=appveyor
 [license-url]: https://github.com/Zaradin/Euromillions_Irish_Lotto_Web_Analysis/blob/master/LICENSE.txt
 
 [product-screenshot]: images/SCREENSHOT_OF_THE_WEB_PLOTLY_END_WHEN_FINISHED.png
