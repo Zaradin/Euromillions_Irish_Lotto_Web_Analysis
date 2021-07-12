@@ -30,8 +30,8 @@
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-<!-- [contributors-shield]: https://img.shields.io/github/contributors/Zaradin/Euromillions_Irish_Lotto_Web_Analysis.svg?style=for-the-badge
-[contributors-url]: https://github.com/Zaradin/Euromillions_Irish_Lotto_Web_Analysis/graphs/contributors -->
+[contributors-shield]: https://img.shields.io/github/contributors/Zaradin/Euromillions_Irish_Lotto_Web_Analysis.svg?style=for-the-badge
+[contributors-url]: https://github.com/Zaradin/Euromillions_Irish_Lotto_Web_Analysis/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/Zaradin/Euromillions_Irish_Lotto_Web_Analysis.svg?style=for-the-badge
 [stars-shield]: https://img.shields.io/github/stars/Zaradin/Euromillions_Irish_Lotto_Web_Analysis.svg?style=for-the-badge
 [stars-url]: https://github.com/Zaradin/Euromillions_Irish_Lotto_Web_Analysis/stargazers
