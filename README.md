@@ -53,7 +53,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]]
+<!-- [![Product Name Screen Shot][product-screenshot]] -->
 
 ### Built With
 * [Requests](https://docs.python-requests.org/en/master/)
@@ -62,6 +62,11 @@
 * [Schedule](https://pypi.org/project/schedule/)
 * [Plotly Dash](https://plotly.com/dash/)  
 * [Bootstrap](https://getbootstrap.com)
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
