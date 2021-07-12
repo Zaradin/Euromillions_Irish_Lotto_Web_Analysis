@@ -41,7 +41,6 @@ schedule.every().friday.at("21:30").do(do_euromillions)
 schedule.every().wednesday.at("21:30").do(do_irishlotto)
 schedule.every().saturday.at("21:30").do(do_irishlotto)
 
-
 while True:
     schedule.run_pending()
     time.sleep(1)

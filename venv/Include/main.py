@@ -1,10 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
-
-#URLs
 euroMillionsResultsURL = 'https://www.lottery.ie/draw-games/results/view?game=euromillions'
 irishLottoResultsURL = 'https://www.lottery.ie/draw-games/results/view?game=lotto'
-
 #Euromillons
 euromillions_html_text = requests.get(euroMillionsResultsURL).text
 soup = BeautifulSoup(euromillions_html_text, 'html.parser')
@@ -13,9 +10,28 @@ soup = BeautifulSoup(euromillions_html_text, 'html.parser')
 irish_lotto_html_text = requests.get(irishLottoResultsURL).text
 soup2 = BeautifulSoup(irish_lotto_html_text, 'html.parser')
 
-#Euromillions functions for scraping the results
 
+def get_euroMillionsHTML():
+    #URL
+    euroMillionsResultsURL = 'https://www.lottery.ie/draw-games/results/view?game=euromillions'
+
+    # Euromillons
+    euromillions_html_text = requests.get(euroMillionsResultsURL).text
+    soup = BeautifulSoup(euromillions_html_text, 'html.parser')
+    return soup
+
+def get_irishLottoHTML():
+    #URL
+    irishLottoResultsURL = 'https://www.lottery.ie/draw-games/results/view?game=lotto'
+
+    # IrishLotto
+    irish_lotto_html_text = requests.get(irishLottoResultsURL).text
+    soup2 = BeautifulSoup(irish_lotto_html_text, 'html.parser')
+    return soup2
+
+#Euromillions functions for scraping the results
 def getEuroMillionsNumbers():
+    soup = get_euroMillionsHTML()
     euroMillionsNumbers = []
     winningResults = soup.find_all("div", {"class": "pick-number"})
     for numbers in range(7):
@@ -23,6 +39,7 @@ def getEuroMillionsNumbers():
     return euroMillionsNumbers
 
 def getEuroMillionsPlusNumbers():
+    soup = get_euroMillionsHTML()
     euroMillionsPlusNumbers = []
     winningResults = soup.find_all("div", {"class": "pick-number"})
     for plusNumbers in range(7, 12):
@@ -30,6 +47,7 @@ def getEuroMillionsPlusNumbers():
     return euroMillionsPlusNumbers
 
 def getLuckyStars():
+    soup = get_euroMillionsHTML()
     luckyStars = []
     winningResults = soup.find_all("div", {"class": "pick-number"})
     for luckyNumbers in range(5, 7):
@@ -39,11 +57,11 @@ def getLuckyStars():
 def getResultsDate():
     resultDate = soup.select('h4')[0].text.strip()
     return resultDate
-
+print(soup.select('h4')[0].text)
 
 #Irish Lotto functions for scraping the results
-
 def getLottoNumbers():
+    soup2 = get_irishLottoHTML()
     lottoNumbers = []
     winningResults = soup2.find_all("div", {"class": "pick-number"})
     for numbers in range(7):
@@ -51,6 +69,7 @@ def getLottoNumbers():
     return lottoNumbers
 
 def getLottoPlusOneNumbers():
+    soup2 = get_irishLottoHTML()
     lottoPlusOneNumbers = []
     winningResults = soup2.find_all("div", {"class": "pick-number"})
     for numbers in range(7, 14):
@@ -58,6 +77,7 @@ def getLottoPlusOneNumbers():
     return lottoPlusOneNumbers
 
 def getLottoPlusTwoNumbers():
+    soup2 = get_irishLottoHTML()
     lottoPlusTwoNumbers = []
     winningResults = soup2.find_all("div", {"class": "pick-number"})
     for numbers in range(14, 21):
