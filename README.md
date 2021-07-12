@@ -15,7 +15,6 @@
   <p align="center">
     The purpose of this project is to web scrape The National Lotto Results and conduct Data Analysis in a web format using Plotly and Dash
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/Zaradin/Euromillions_Irish_Lotto_Web_Analysis">View Demo</a>
@@ -26,6 +25,43 @@
   </p>
 </p>
 
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#license">License</a></li>
+  </ol>
+</details>
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[![Product Name Screen Shot][product-screenshot]]
+
+### Built With
+* [Requests](https://docs.python-requests.org/en/master/)
+* [Beautiful Soup](https://pypi.org/project/beautifulsoup4/)
+* [SQLite](https://docs.python.org/3/library/sqlite3.html) 
+* [Schedule](https://pypi.org/project/schedule/)
+* [Plotly Dash](https://plotly.com/dash/)  
+* [Bootstrap](https://getbootstrap.com)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
@@ -39,4 +75,4 @@
 [license-shield]: https://img.shields.io/github/license/Zaradin/Euromillions_Irish_Lotto_Web_Analysis.svg?style=for-the-badge
 [license-url]: https://github.com/Zaradin/Euromillions_Irish_Lotto_Web_Analysis/blob/master/LICENSE.txt
 
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: images/SCREENSHOT_OF_THE_WEB_PLOTLY_END_WHEN_FINISHED.png
