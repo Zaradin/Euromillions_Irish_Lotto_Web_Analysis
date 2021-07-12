@@ -13,16 +13,16 @@
   <h3 align="center">The National Lottery Web Analysis</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    The purpose of this project is to web scrape The National Lotto Results and conduct Data Analysis in a web format using Plotly and Dash
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://github.com/Zaradin/Euromillions_Irish_Lotto_Web_Analysis">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/Zaradin/Euromillions_Irish_Lotto_Web_Analysis/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/Zaradin/Euromillions_Irish_Lotto_Web_Analysis/issues">Request Feature</a>
   </p>
 </p>
 
