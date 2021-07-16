@@ -4,40 +4,47 @@ import sqlite3
 from datetime import datetime
 con = sqlite3.connect("Results")
 
-date = datetime.today().strftime('%d-%m-%Y')
 
-def insertEuromillionsResults():
-    euroMillionsNumbers = main.getEuroMillionsNumbers()
-    con.execute("INSERT INTO euromillionsResults VALUES (?, ?, ?, ?, ?, ?, ?, ?);", (
-    date, euroMillionsNumbers[0], euroMillionsNumbers[1], euroMillionsNumbers[2], euroMillionsNumbers[3],
-    euroMillionsNumbers[4], euroMillionsNumbers[5], euroMillionsNumbers[6]))
-    con.commit()
+class insertEuro():
+    def __init__(self):
+        self.date = datetime.today().strftime('%d-%m-%Y')
 
-def insertEuromillionsPlusResults():
-    euroMillionsPlusNumbers = main.getEuroMillionsPlusNumbers()
-    con.execute("INSERT INTO euromillionsPlusResults VALUES (?, ?, ?, ?, ?, ?);", (
-    date, euroMillionsPlusNumbers[0], euroMillionsPlusNumbers[1], euroMillionsPlusNumbers[2], euroMillionsPlusNumbers[3],
-    euroMillionsPlusNumbers[4]))
-    con.commit()
+    def insertEuromillionsResults(self):
+        self.euroMillionsNumbers = main.EuromillionsToHTML().getEuroMillionsNumbers()
+        con.execute("INSERT INTO euromillionsResults VALUES (?, ?, ?, ?, ?, ?, ?, ?);", (
+        self.date, self.euroMillionsNumbers[0], self.euroMillionsNumbers[1], self.euroMillionsNumbers[2], self.euroMillionsNumbers[3],
+        self.euroMillionsNumbers[4], self.euroMillionsNumbers[5], self.euroMillionsNumbers[6]))
+        con.commit()
 
-def insertIrishLottoResults():
-    irishLottoNumbers = main.getLottoNumbers()
-    con.execute("INSERT INTO irishLottoResults VALUES (?, ?, ?, ?, ?, ?, ?, ?);", (
-    date, irishLottoNumbers[0], irishLottoNumbers[1], irishLottoNumbers[2], irishLottoNumbers[3],
-    irishLottoNumbers[4], irishLottoNumbers[5], irishLottoNumbers[6]))
-    con.commit()
+    def insertEuromillionsPlusResults(self):
+        self.euroMillionsPlusNumbers = main.EuromillionsToHTML().getEuroMillionsPlusNumbers()
+        con.execute("INSERT INTO euromillionsPlusResults VALUES (?, ?, ?, ?, ?, ?);", (
+        self.date, self.euroMillionsPlusNumbers[0], self.euroMillionsPlusNumbers[1], self.euroMillionsPlusNumbers[2], self.euroMillionsPlusNumbers[3],
+        self.euroMillionsPlusNumbers[4]))
+        con.commit()
 
-def insertIrishLottoPlusOneResults():
-    irishLottoPlusOneNumbers = main.getLottoPlusOneNumbers()
-    con.execute("INSERT INTO irishLottoPlusOneResults VALUES (?, ?, ?, ?, ?, ?, ?, ?);", (
-    date, irishLottoPlusOneNumbers[0], irishLottoPlusOneNumbers[1], irishLottoPlusOneNumbers[2], irishLottoPlusOneNumbers[3],
-    irishLottoPlusOneNumbers[4], irishLottoPlusOneNumbers[5], irishLottoPlusOneNumbers[6]))
-    con.commit()
+class insertIrish():
+    def __init__(self):
+        self.date = datetime.today().strftime('%d-%m-%Y')
 
-def insertIrishLottoPlusTwoResults():
-    irishLottoPlusTwoNumbers = main.getLottoPlusTwoNumbers()
-    con.execute("INSERT INTO irishLottoPlusTwoResults VALUES (?, ?, ?, ?, ?, ?, ?, ?);", (
-    date, irishLottoPlusTwoNumbers[0], irishLottoPlusTwoNumbers[1], irishLottoPlusTwoNumbers[2], irishLottoPlusTwoNumbers[3],
-    irishLottoPlusTwoNumbers[4], irishLottoPlusTwoNumbers[5], irishLottoPlusTwoNumbers[6]))
-    con.commit()
+    def insertIrishLottoResults(self):
+        self.irishLottoNumbers = main.IrishLottoToHTML().getLottoNumbers()
+        con.execute("INSERT INTO irishLottoResults VALUES (?, ?, ?, ?, ?, ?, ?, ?);", (
+        self.date, self.irishLottoNumbers[0], self.irishLottoNumbers[1], self.irishLottoNumbers[2], self.irishLottoNumbers[3],
+        self.irishLottoNumbers[4], self.irishLottoNumbers[5], self.irishLottoNumbers[6]))
+        con.commit()
+
+    def insertIrishLottoPlusOneResults(self):
+        self.irishLottoPlusOneNumbers = main.IrishLottoToHTML().getLottoPlusOneNumbers()
+        con.execute("INSERT INTO irishLottoPlusOneResults VALUES (?, ?, ?, ?, ?, ?, ?, ?);", (
+        self.date, self.irishLottoPlusOneNumbers[0], self.irishLottoPlusOneNumbers[1], self.irishLottoPlusOneNumbers[2], self.irishLottoPlusOneNumbers[3],
+        self.irishLottoPlusOneNumbers[4], self.irishLottoPlusOneNumbers[5], self.irishLottoPlusOneNumbers[6]))
+        con.commit()
+
+    def insertIrishLottoPlusTwoResults(self):
+        self.irishLottoPlusTwoNumbers = main.IrishLottoToHTML().getLottoPlusTwoNumbers()
+        con.execute("INSERT INTO irishLottoPlusTwoResults VALUES (?, ?, ?, ?, ?, ?, ?, ?);", (
+        self.date, self.irishLottoPlusTwoNumbers[0], self.irishLottoPlusTwoNumbers[1], self.irishLottoPlusTwoNumbers[2], self.irishLottoPlusTwoNumbers[3],
+        self.irishLottoPlusTwoNumbers[4], self.irishLottoPlusTwoNumbers[5], self.irishLottoPlusTwoNumbers[6]))
+        con.commit()
 

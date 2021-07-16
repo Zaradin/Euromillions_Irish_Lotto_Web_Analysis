@@ -25,13 +25,27 @@ cursor.close()
 con.close()
 
 def do_euromillions():
-    database.insertEuromillionsResults()
-    database.insertEuromillionsPlusResults()
+    print("Getting Euromillons Results...")
+
+    insertEuro = database.insertEuro()
+    insertEuro.insertEuromillionsResults()
+    insertEuro.insertEuromillionsPlusResults()
+
+    time.sleep(120)
+
+    del insertEuro
 
 def do_irishlotto():
-    database.insertIrishLottoResults()
-    database.insertIrishLottoPlusOneResults()
-    database.insertIrishLottoPlusTwoResults()
+    print("Getting Irish Lotto Results...")
+
+    insertIrish = database.insertIrish()
+    insertIrish.insertIrishLottoResults()
+    insertIrish.insertIrishLottoPlusOneResults()
+    insertIrish.insertIrishLottoPlusTwoResults()
+
+    time.sleep(120)
+
+    del insertIrish
 
 #Euromillions results
 schedule.every().tuesday.at("21:30").do(do_euromillions)
@@ -40,6 +54,8 @@ schedule.every().friday.at("21:30").do(do_euromillions)
 #Irish Lotto Results with plus draws
 schedule.every().wednesday.at("21:30").do(do_irishlotto)
 schedule.every().saturday.at("21:30").do(do_irishlotto)
+
+do_irishlotto()
 
 while True:
     schedule.run_pending()
